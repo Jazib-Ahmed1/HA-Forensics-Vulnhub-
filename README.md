@@ -77,12 +77,11 @@ bash
 Copy
 Edit
 unzip flag.zip
+
+ 🎯 Flag #2 Found inside PDF
 ```
-
-## 🎯 Flag #2 Found inside PDF
+## 🧠 5. Memory Forensics
 ```bash
-
-🧠 5. Memory Forensics
 The ZIP also contains a .dmp file (memory dump).
 Analyze with pypykatz:
 
@@ -100,7 +99,7 @@ Edit
 john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt
 Password found: Password@1
 ```
-🔓 6. Initial Access (SSH + Meterpreter)
+## 🔓 6. Initial Access (SSH + Meterpreter)
 
 ```bash
 bash
@@ -127,7 +126,7 @@ Copy
 Edit
 run autoroute -s 172.17.0.0/24
 ```
-📡 7. Internal Pivot & FTP Access
+## 📡 7. Internal Pivot & FTP Access
 ```bash
 Ping sweep to find Docker service:
 
@@ -148,7 +147,7 @@ Name: anonymous
 Password: anonymous
 Inside /pub/ ➝ saboot.001
 ```
-🔬 8. Forensic Image Analysis with Autopsy
+## 🔬 8. Forensic Image Analysis with Autopsy
 ```bash
 Transfer using Python HTTP server:
 
@@ -174,13 +173,13 @@ Open browser: http://localhost:9999
 
 Create case ➝ Add image ➝ Select as partition
 ```
-🎯 Found:
+## 🎯 Found:
 ```bash
 flag.txt ➝ Flag #3
 
 creds.txt ➝ Base64-encoded password
 ```
-🧬 9. Privilege Escalation
+## 🧬 9. Privilege Escalation
 ```bash
 Decode creds:
 
@@ -208,7 +207,7 @@ Copy
 Edit
 sudo bash
 ```
-🎯 Final flag at /root/final_flag.txt ➝ Flag #4
+## 🎯 Final flag at /root/final_flag.txt ➝ Flag #4
 ```bash
 🧠 Key Learnings
 Always brute-force with multiple file extensions
@@ -222,3 +221,21 @@ Use autoroute to pivot inside internal networks
 Autopsy is a powerful GUI-based image analyzer
 
 Don’t underestimate Base64 encoding for password hiding
+```
+## 🛠️ Tools Used
+```bash
+Tool	Purpose:
+1. netdiscover	Identify local IP
+2. nmap	Port & version scanning
+3. dirb	Web enumeration
+4. exiftool	Metadata extraction
+5. john	Password cracking
+6. pypykatz	Dump parsing
+7. autopsy	Disk image forensic analysis
+8. Metasploit	Exploitation & pivoting
+```
+👋 Final Words
+Thank you for reading this walkthrough!
+If you liked it, ⭐ star the repo and follow for more.
+
+Stay safe and happy hacking!
